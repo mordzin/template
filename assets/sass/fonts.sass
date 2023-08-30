@@ -1,0 +1,58 @@
+*
+	color: #fff
+	font-size: 1rem
+	font-smooth: antialiased
+	font-family: "Poppins", sans-serif
+	text-align: left
+
+@each $num in (1, 2, 3, 4, 5, 6, 8)
+	.fs#{ $num }
+		font-size: #{calc( 6 / $num )}rem
+
+.fwb
+	font-weight: 500
+.fwr
+	font-weight: 400
+	
+.faccent
+	color: var(--accent)
+.fdanger
+	& p, i
+		color: var(--danger) !important
+.fwarming
+	& p, i
+		color: var(--warming) !important
+.fsuccess
+	& p, i
+		color: var(--success) !important
+.finfo
+	& p, i
+		color: var(--info) !important
+
+h1, h2, h3, h4, h5, h6
+	@extend .fwb
+
+h1, h2, h3, h4, h5, h6
+	&:not(:last-child)
+		margin-bottom: 0.25rem
+	
+h1
+	@extend .fs2
+h2
+	@extend .fs3
+h3
+	@extend .fs4
+h4
+	@extend .fs5
+h5
+	@extend .fs6
+
+p
+	@extend .fwr
+
+.tc
+	text-align: center
+.tl
+	text-align: left
+.tr
+	text-align: right

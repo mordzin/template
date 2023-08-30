@@ -1,0 +1,31 @@
+input, textarea, select
+	@extend .wfill
+	@extend .ofh
+	@extend .cp
+	@extend .p3
+	&:hover
+		box-shadow: inset 0 0 0 2px var(--light)
+	&:focus
+		box-shadow: inset 0 0 0 2px var(--accent)
+	
+.field
+	padding: 0 !important
+	label
+		position: absolute
+		color: var(--accent)
+		inset: var(--3) auto auto var(--3)
+		font-weight: 500
+	i
+		width: fit-content
+		position: absolute
+		inset: auto var(--3) var(--3) auto
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+/* Firefox */
+input[type=number]
+	-moz-appearance: textfield

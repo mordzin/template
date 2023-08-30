@@ -1,0 +1,193 @@
+
+// Paddings
+@each $num in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+	.x#{ $num }
+		width: calc(100% / 12 * $num)
+	.w#{ $num }
+		width: calc(100% / 12 * $num)
+	
+// grid Props
+.grid, grid
+	display: grid
+	gap: var(--2)
+	@extend .wfill
+	@extend .gfc
+
+// grid Columns
+.gtc--1
+	grid-template-columns: 1fr
+.gc1-1
+	grid-column: 1fr 1fr
+.gtc--a-1
+	grid-template-columns: auto 1fr
+.gtc--1-a
+	grid-template-columns: 1fr auto
+.gtc--1-min
+	grid-template-columns: 1fr min-content
+.gtc--min-1
+	grid-template-columns: min-content 1fr
+.gtc--min-1-min, .gcm1m
+	grid-template-columns: min-content 1fr min-content
+.gtc--fit-1-fit
+	grid-template-columns: fit-content 1fr fit-content
+.gtc--max-1-max
+	grid-template-columns: max-content 1fr max-content
+
+// Grid Rows
+.gtr--1-min, .gcf
+	grid-template-rows: 1fr min-content
+.gtr--min-1, .ghc
+	grid-template-rows: min-content 1fr
+.gtr--min-1-min, .ghcf
+	grid-template-rows: min-content 1fr min-content
+
+
+.jcsb
+	justify-content: space-between
+.jcc
+	justify-content: center
+.jcsa
+	justify-content: space-around
+.jcn
+	justify-content: normal
+.jcs
+	justify-content: start
+.jce
+	justify-content: end
+
+.gaic
+	align-items: center
+.gfc
+	grid-auto-flow: column
+.gfr
+	grid-auto-flow: row
+	
+.absolute
+	position: absolute
+.relative
+	position: relative
+.fixed
+	position: fixed
+.sticky
+	position: sticky
+.block
+	display: block
+
+.fl
+	float: left
+.fr
+	float: right
+.fn
+	float: none
+
+.bottom
+	bottom: 0 !important
+.right
+	right: 0
+.left
+	left: 0
+.top
+	top: 0
+
+// Sizes
+
+.h100
+	height: 100%
+.hfit
+	height: fit-content
+.minh100
+	min-height: 100vh
+.maxh100
+	max-height: 100vh
+.hflow, .hfill
+	height: 100%
+.hv100
+	height: 100vh
+.hauto
+	height: auto
+
+.wauto
+	width: auto
+.wfit
+	width: fit-content
+.wmin
+	width: min-content
+.wmax
+	width: max-content
+.wflow
+	width: 100%
+.wfill
+	width: stretch
+	
+.whfill
+	width: stretch
+	height: stretch
+
+// Overflows
+.ofs
+	overflow: scroll
+.ofh
+	overflow: hidden
+	
+.visible
+	visibility: visible
+.hidden
+	visibility: hidden
+
+
+// Paddings
+@each $num in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+	.p#{ $num }
+		padding: var(--#{$num})
+		border-radius: var(--#{$num})
+	.px#{ $num }
+		padding-inline: var(--#{$num})
+	.pxt#{ $num }
+		padding-top: var(--#{$num})
+		padding-inline: var(--#{$num})
+	.pxb#{ $num }
+		padding-bottom: var(--#{$num})
+		padding-inline: var(--#{$num})
+	.py#{ $num }
+		padding-block: var(--#{$num})
+	.pr#{ $num }
+		padding-right: var(--#{$num})
+	.pl#{ $num }
+		padding-left: var(--#{$num})
+	.pt#{ $num }
+		padding-top: var(--#{$num})
+	.pb#{ $num }
+		padding-bottom: var(--#{$num})
+	.z#{ $num }
+		z-index: $num
+
+// Margins
+@each $num in (0, 1, 2, 3)
+	.mb#{ $num }:not(:last-child)
+		margin-bottom: var(--#{$num})
+
+// Border Radius
+@each $num in (0, 1, 2, 3, 4, 5, 6)
+	.b#{ $num }
+		border-radius: var(--#{$num})
+	.bt#{ $num }
+		border-top-left-radius: var(--#{$num})
+		border-top-right-radius: var(--#{$num})
+	.bb#{ $num }
+		border-bottom-left-radius: var(--#{$num})
+		border-bottom-right-radius: var(--#{$num})
+
+// Wraps
+@each $num in (360, 480, 640, 720, 800, 880, 960)
+	.w#{ $num }
+		max-width: #{$num}px
+		float: none
+		margin: auto
+		
+// Grids
+@each $num in (0, 1, 2, 3, 4, 5)
+	.g#{ $num }
+		gap: var(--#{$num})
+
+.cp
+	cursor: pointer

@@ -1,0 +1,3 @@
+<template>
+	<LazyNuxtPage />
+</template>

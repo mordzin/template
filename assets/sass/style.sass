@@ -1,0 +1,62 @@
+$base: 0.5rem
+
+:root
+	@each $num in 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+		--#{$num}: #{ $base * $num }
+
+*:not(html, head *, script, span, label, table, tr, td, th, thead, tbody)
+	margin: 0
+	padding: 0
+	border: none
+	outline: none
+	width: stretch	
+	position: relative
+	display: flow
+	float: left
+	box-sizing: border-box
+	scroll-behavior: smooth
+	background-color: transparent
+	transition: all 0.1s ease-in-out
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+	transition: background-color 9999999s ease-in-out 0s
+	-webkit-text-fill-color: #000 !important
+
+::-webkit-scrollbar
+	display: none
+
+html, body, #__nuxt
+	min-height: 100%
+
+.style
+	color: #fff
+	backdrop-filter: var(--1)
+	background: transparent linear-gradient(175deg, #60606533 0%, #50505533 100%)
+	box-shadow: inset 1px 1px 1px 0px #50505550, inset -1px -1px 1px 0px #10101550
+
+.style2
+	color: #fff
+	backdrop-filter: var(--1)
+	background: rgba(0,0,0, 0.16)
+	box-shadow: inset -0.5px -1px 1px 0px #50505550, inset 0.5px 1px 1px 0px #10101550
+
+
+button, .card
+	@extend .style
+
+input, textarea, select, .box
+	@extend .style2
+
+
+.hover:hover
+	mix-blend-mode: screen
+
+
+
+
+@import grid, fonts, colors
+@import fields, buttons
+@import transitions
